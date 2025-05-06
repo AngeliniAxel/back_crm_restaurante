@@ -22,8 +22,23 @@
 
 GET {{host}}/api/menus
 
-###
+### GET BY ID
 GET {{host}}/api/menus/2
+
+### EDIT
+PUT {{host}}/api/menus/2
+Content-Type: application/json
+
+{
+    "name": "menu",
+    "firsts": "asf",
+    "seconds": "sdfs",
+    "desserts": "sdfgh",
+    "price": 20
+}
+
+
+
 
 
 ###########

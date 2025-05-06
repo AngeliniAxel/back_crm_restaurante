@@ -11,4 +11,12 @@ const getById = async (req, res) => {
   res.json(result);
 };
 
-module.exports = { getAll, getById };
+const edit = async (req, res) => {
+  const { menuId } = req.params;
+  const result = await Menu.edit(menuId, req.body);
+  const menuUpdate = await Menu.selectById(menuId);
+  res.json(menuUpdate); 
+  console.log(result);
+}
+
+module.exports = { getAll, getById, edit };

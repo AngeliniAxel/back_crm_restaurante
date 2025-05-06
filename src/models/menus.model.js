@@ -14,4 +14,22 @@ const selectById = async (menuId) => {
   return result[0];
 };
 
-module.exports = { selectAll, selectById };
+const edit = async (menuId, {
+  name,
+  firsts,
+  seconds,
+  desserts,
+  price
+}) => {
+  const [result] = await db.query(
+    "UPDATE menu SET name = ?, firsts = ?, seconds = ?, desserts = ?, price = ? WHERE id = ?",
+    [name, firsts, seconds, desserts, price, menuId]
+  );
+
+  return result;
+};
+
+
+
+
+module.exports = { selectAll, selectById, edit };
