@@ -1,6 +1,5 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
-router.use('/menu', require('./api/menu.routes.js'))
+router.use("/menus", require("./api/menus.routes"));
 
-module.exports = { router }
-
+module.exports = router;
