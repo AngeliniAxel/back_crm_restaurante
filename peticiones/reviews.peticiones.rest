@@ -6,9 +6,9 @@ GET {{host}}/api/reviews
 
 POST {{host}}/api/reviews
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImdlbmVyYWwiLCJpYXQiOjE3NDY1NTY2NjN9.Q7p1tK4FUtCj0XWKnlHvKJeyi5X71lMtejhf1UxYNtE
 
 {
-    "user_id": 9,
     "message": "La comida esta riquisima",
     "rating": 10
 }
