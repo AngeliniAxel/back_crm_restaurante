@@ -1,0 +1,16 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/tables
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImdlbmVyYWwiLCJpYXQiOjE3NDY1NTY2NjN9.Q7p1tK4FUtCj0XWKnlHvKJeyi5X71lMtejhf1UxYNtE
+
+###
+
+POST {{host}}/api/reviews
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImdlbmVyYWwiLCJpYXQiOjE3NDY1NTY2NjN9.Q7p1tK4FUtCj0XWKnlHvKJeyi5X71lMtejhf1UxYNtE
+
+{
+    "message": "La comida esta riquisima",
+    "rating": 10
+}
