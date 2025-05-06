@@ -6,6 +6,7 @@ const getAll = async (req, res) => {
 };
 
 const create = async (req, res) => {
+    req.body.user_id = req.user.id;
     // req.body = {user_id, message, rating}
     const result = await Review.insert(req.body);
     const newReview = await Review.selectById(result.insertId);
