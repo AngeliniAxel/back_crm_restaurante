@@ -1,0 +1,21 @@
+@host = http://localhost:3000
+
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "carlos@example.com",
+    "password": "hashedpass2"
+}
+
+
+###
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "name": "juanita",
+    "email": "juanitaer@email.com",
+    "password":"123465",
+    "role": "general"
+}
