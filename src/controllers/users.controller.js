@@ -4,12 +4,12 @@ const User = require('../models/users.model');
 
 const register = async (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, 8);
-    //body: name, email, password, role
+    //body: name, email, password
     const result = await User.insert(req.body);
     //recupero los datos del nuevo usuario
-    const user = await User.selectById(result.insertId)
+    const user = await User.selectById(result.insertId);
     res.json(user);
-}
+};
 
 const login = async (req, res) => {
     const user = await User.selectByEmail(req.body.email);
@@ -22,11 +22,11 @@ const login = async (req, res) => {
     }
     const payload = {
         id: user.id,
-        role: user.role
-    }
+        role: user.role,
+    };
     res.json({
         message: 'Login correcto',
-        token: jwt.sign(payload, 'Manizales del Alma')
+        token: jwt.sign(payload, 'Manizales del Alma'),
     });
 };
 
