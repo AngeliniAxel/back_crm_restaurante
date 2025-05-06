@@ -14,11 +14,11 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     const user = await User.selectByEmail(req.body.email);
     if (!user) {
-        return res.status(401).json({ message: 'Error en email1' });
+        return res.status(401).json({ message: 'Email y/o contraseña incorrectos' });
     }
     const same = bcrypt.compareSync(req.body.password, user.password);
     if (!same) {
-        return res.status(401).json({ message: 'Error en email2' });
+        return res.status(401).json({ message: 'Email y/o contraseña incorrectos' });
     }
     const payload = {
         id: user.id,
