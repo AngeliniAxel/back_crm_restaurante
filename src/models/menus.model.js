@@ -8,7 +8,7 @@ const selectAll = async () => {
 
 const selectById = async (menuId) => {
   const [result] = await db.query("select * from menu where menu.id = ?", [
-    menuId,
+    menuId
   ]);
   if (result.length === 0) return null;
   return result[0];
