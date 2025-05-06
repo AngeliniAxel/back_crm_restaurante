@@ -13,7 +13,7 @@ CREATE TABLE users (
 
 -- Tabla de mesas
 CREATE TABLE tables (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id INT PRIMARY KEY,
   capacity TINYINT NOT NULL
 );
 
