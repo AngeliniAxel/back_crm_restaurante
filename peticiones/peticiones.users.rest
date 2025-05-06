@@ -4,8 +4,8 @@ POST {{host}}/api/users/login
 Content-Type: application/json
 
 {
-    "email": "carlos@example.com",
-    "password": "hashedpass2"
+    "email": "admin@gmail.com",
+    "password": "123465"
 }
 
 
@@ -14,8 +14,8 @@ POST {{host}}/api/users/register
 Content-Type: application/json
 
 {
-    "name": "juanita",
-    "email": "juanitaer@email.com",
+    "name": "admin",
+    "email": "admin@gmail.com",
     "password":"123465",
-    "role": "general"
+    "role": "admin"
 }
