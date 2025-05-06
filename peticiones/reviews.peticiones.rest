@@ -1,0 +1,14 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/reviews
+
+###
+
+POST {{host}}/api/reviews
+Content-Type: application/json
+
+{
+    "user_id": 9,
+    "message": "La comida esta riquisima",
+    "rating": 10
+}
