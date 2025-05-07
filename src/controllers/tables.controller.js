@@ -12,7 +12,7 @@ const getTableById = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    // req.body = {id, capacity}
+    // req.body = {id, capacity, num_table}
     let result;
     try {
         result = await Table.insert(req.body);
@@ -26,11 +26,11 @@ const edit = async (req, res) => {
     const { tableId } = req.params;
     let result;
     try {
-        result = await Table.update(tableId, req.body.capacity);
+        result = await Table.update(tableId, req.body.capacity, req.body.num_table);
     } catch (error) {
         res.status(400).json(error);
     }
-
+    console.log(result);
     const tableUpdated = await Table.selectById(tableId);
 
     res.json(tableUpdated);

@@ -13,22 +13,23 @@ const selectById = async (id) => {
     return result[0];
 };
 
-const insert = async ({ id, capacity }) => {
-    const [result] = await db.query('INSERT INTO tables (id,capacity) values (?,?)', [
-        id,
+const insert = async ({ capacity, num_table }) => {
+    const [result] = await db.query('INSERT INTO tables (capacity, num_table ) values (?, ?)', [
         capacity,
+        num_table,
     ]);
-
+    console.log(result);
     if (!result.affectedRows) return null;
 
-    const newTable = await selectById(id);
+    const newTable = await selectById(result.insertId);
 
     return newTable;
 };
 
-const update = async (tableId, capacity) => {
-    const [result] = await db.query('update tables set capacity = ? where id = ?', [
+const update = async (tableId, capacity, num_table ) => {
+    const [result] = await db.query('UPDATE tables SET capacity = ?, num_table = ? WHERE id = ?', [
         capacity,
+        num_table,
         tableId,
     ]);
     return result;
