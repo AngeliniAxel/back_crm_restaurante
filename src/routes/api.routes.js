@@ -8,4 +8,6 @@ router.use('/reviews', require('./api/reviews.routes'));
 
 router.use('/tables', require('./api/tables.routes'));
 
+router.use('/reservations', require('./api/reservations.routes'));
+
 module.exports = router;
