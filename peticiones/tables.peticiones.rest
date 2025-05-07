@@ -4,6 +4,14 @@ GET {{host}}/api/tables
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
+
+###
+
+GET {{host}}/api/tables/2
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NjI1OTE5fQ.HhVf9PCmYAlj6tgkb6Pz6yKqa7qln_WH3G2BECVbv2Q
+
+
 ###
 
 POST {{host}}/api/tables
@@ -11,7 +19,7 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
 {
-    "id": 40,
+    "id": 4,
     "capacity": 10
 }
 
