@@ -2,15 +2,31 @@
 
 GET {{host}}/api/tables
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImdlbmVyYWwiLCJpYXQiOjE3NDY1NTY2NjN9.Q7p1tK4FUtCj0XWKnlHvKJeyi5X71lMtejhf1UxYNtE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
 ###
 
-POST {{host}}/api/reviews
+POST {{host}}/api/tables
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImdlbmVyYWwiLCJpYXQiOjE3NDY1NTY2NjN9.Q7p1tK4FUtCj0XWKnlHvKJeyi5X71lMtejhf1UxYNtE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
 {
-    "message": "La comida esta riquisima",
-    "rating": 10
+    "id": 40,
+    "capacity": 10
 }
+
+###
+
+PUT {{host}}/api/tables/10
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
+
+{
+    "capacity": 40
+}
+
+###
+
+DELETE {{host}}/api/tables/10
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
