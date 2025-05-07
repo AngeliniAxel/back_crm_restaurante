@@ -11,11 +11,11 @@ GET {{host}}/api/menus
 GET {{host}}/api/menus/4
 
 ### EDIT
-PUT {{host}}/api/menus/2
+PUT {{host}}/api/menus/5
 Content-Type: application/json
 
 {
-    "name": "menu",
+    "name": "menu murlock",
     "firsts": "asf",
     "seconds": "sdfs",
     "desserts": "sdfgh",
