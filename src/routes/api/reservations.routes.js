@@ -1,9 +1,7 @@
 const router = require("express").Router();
-const { getAll } = require("../../controllers/reservations.controller");
-const { insert } = require("../../models/reservations.models");
-
+const { getAll, create } = require("../../controllers/reservations.controller");
 
 router.get("/", getAll);
-router.post("/", insert);
+router.post("/", create);
 
 module.exports = router;
