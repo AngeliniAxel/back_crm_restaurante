@@ -23,6 +23,7 @@ const login = async (req, res) => {
     const payload = {
         id: user.id,
         role: user.role,
+        name: user.name,
     };
     res.json({
         message: 'Login correcto',
