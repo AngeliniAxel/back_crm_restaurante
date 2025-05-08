@@ -1,0 +1,17 @@
+@host = http://localhost:3000
+
+GET {{host}}/api/reservations
+
+###
+
+POST {{host}}/api/reservations
+Content-Type: application/json
+
+{
+    "id": 40,
+    "reservation_date": "2023-10-01",
+    "reservation_time": "12:00",
+    "num_guests": 2,
+    "special_request": "wea",
+    "status": "pending"
+}
