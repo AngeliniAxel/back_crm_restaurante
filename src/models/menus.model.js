@@ -29,7 +29,4 @@ const edit = async (menuId, {
   return result;
 };
 
-
-
-
 module.exports = { selectAll, selectById, edit };

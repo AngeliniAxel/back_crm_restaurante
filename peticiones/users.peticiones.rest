@@ -4,7 +4,11 @@ POST {{host}}/api/users/login
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "email": "admisn@gmail.com",
+=======
+    "email": "luis@gmail.com",
+>>>>>>> fb3f6aeebc29a5ba213baa56d704ce79f9873ad4
     "password": "123465"
 }
 
@@ -14,8 +18,7 @@ POST {{host}}/api/users/register
 Content-Type: application/json
 
 {
-    "name": "admin",
-    "email": "admisn@gmail.com",
-    "password":"123465",
-    "role": "admin"
+    "name": "luis",
+    "email": "luis@gmail.com",
+    "password":"123465"
 }
