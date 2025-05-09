@@ -39,5 +39,13 @@ const deleteById = async (tableId) => {
     const [result] = await db.query('delete from tables where id = ?', [tableId]);
     return result;
 };
+const selectByCapacity = async (capacity) => {
+    const [result] = await db.query(`select * from tables where capacity >= ?`, [capacity]);
+    
+    
+    if (!result.length) return null;
 
-module.exports = { selectAll, selectById, insert, update, deleteById };
+    return result;
+}
+
+module.exports = { selectAll, selectById, insert, update, deleteById, selectByCapacity };
