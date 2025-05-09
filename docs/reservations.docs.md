@@ -35,7 +35,7 @@
 
 Response: Un objeto con los datos de la reserva con el ID
 
-## Eliminar una reserva
+## Eliminar una reserva ---ok(fatla agregar Authorization -> TOKEN)
 
 - Method: DELETE
 - URL: /api/reserva/<reservaId>

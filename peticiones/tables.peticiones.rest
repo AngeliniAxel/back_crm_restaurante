@@ -36,6 +36,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWlu
 
 ###
 
-DELETE {{host}}/api/tables/12
+DELETE {{host}}/api/tables/8
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA

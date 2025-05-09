@@ -2,13 +2,23 @@
 
 GET {{host}}/api/reservations
 
+
+###
+
+GET {{host}}/api/reservations/3
+
+
+###
+GET {{host}}/api/reservations/date/2023-10-10
+
+
+
 ###
 
 POST {{host}}/api/reservations
 Content-Type: application/json
 
 {
-    "id": 6,
     "user_id": 5,
     "table_id": 2,
     "reservation_date": "2023-10-10",
@@ -17,3 +27,11 @@ Content-Type: application/json
     "special_request": "wea",
     "status": "pending"
 }
+
+
+###
+
+DELETE {{host}}/api/reservations/3
+Content-Type: application/json
+
+
