@@ -12,6 +12,9 @@ GET {{host}}/api/reservations/3
 GET {{host}}/api/reservations/date/2023-10-10
 
 
+###
+GET {{host}}/api/reservations/date/2023-10-10/17:00
+
 
 ###
 
@@ -22,7 +25,7 @@ Content-Type: application/json
     "user_id": 5,
     "table_id": 2,
     "reservation_date": "2023-10-10",
-    "reservation_time": "12:00",
+    "reservation_time": "17:00",
     "num_guests": 2,
     "special_request": "wea",
     "status": "pending"
@@ -31,7 +34,8 @@ Content-Type: application/json
 
 ###
 
-DELETE {{host}}/api/reservations/3
+DELETE {{host}}/api/reservations/1
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
 
