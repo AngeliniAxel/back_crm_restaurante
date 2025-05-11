@@ -1,4 +1,5 @@
-const Reservation = require("../models/reservations.model.js");
+const Reservation = require('../models/reservations.model.js');
+const { sendEmail } = require('../utils/nodemailer.js');
 
 const getAll = async (req, res) => {
     const result = await Reservation.selectAll();
@@ -9,24 +10,25 @@ const getReservationById = async (req, res) => {
     const { reservationId } = req.params;
     const result = await Reservation.selectById(reservationId);
     res.json(result);
-}
+};
 
 const getReservationsByDate = async (req, res) => {
     const { reservationDate } = req.params;
     const result = await Reservation.selectByDate(reservationDate);
     res.json(result);
-}
+};
 
 const getReservationsByDateAndTime = async (req, res) => {
-    const { reservationDate, reservationTime} = req.params;
+    const { reservationDate, reservationTime } = req.params;
     const result = await Reservation.selectByDateAndTime(reservationDate, reservationTime);
     res.json(result);
-}
+};
 
 const create = async (req, res) => {
     const result = await Reservation.insert(req.body);
+    sendEmail();
     res.json(result);
-}
+};
 
 const remove = async (req, res) => {
     const { reservationId } = req.params;
@@ -36,5 +38,11 @@ const remove = async (req, res) => {
     res.json(reservationDeleted);
 };
 
-
-module.exports = { getAll, getReservationById, getReservationsByDate, getReservationsByDateAndTime, create, remove };
+module.exports = {
+    getAll,
+    getReservationById,
+    getReservationsByDate,
+    getReservationsByDateAndTime,
+    create,
+    remove,
+};
