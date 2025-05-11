@@ -1,5 +1,5 @@
 const Reservation = require('../models/reservations.model.js');
-const { sendEmail } = require('../utils/nodemailer.js');
+const { sendEmail } = require('../utils/mailjet.js');
 
 const getAll = async (req, res) => {
     const result = await Reservation.selectAll();
@@ -26,7 +26,7 @@ const getReservationsByDateAndTime = async (req, res) => {
 
 const create = async (req, res) => {
     const result = await Reservation.insert(req.body);
-    sendEmail();
+    sendEmail(req.user, result);
     res.json(result);
 };
 
