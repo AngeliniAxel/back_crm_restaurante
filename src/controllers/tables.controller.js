@@ -5,20 +5,23 @@ const getAll = async (req, res) => {
     res.json(result);
 };
 
+const getAvailableTables = async (req, res) => {
+    const { capacity, date, time } = req.params;
+    const result = await Table.selectAvailableTables(capacity, date, time);
+    res.json(result);
+};
+
 const getTableById = async (req, res) => {
     const { tableId } = req.params;
     const result = await Table.selectById(tableId);
     res.json(result);
-
-}
-
+};
 
 const getTableByCapacity = async (req, res) => {
     const { capacity } = req.params;
     const result = await Table.selectByCapacity(capacity);
     res.json(result);
-}
-
+};
 
 const create = async (req, res) => {
     // req.body = {id, capacity, num_table}
@@ -53,4 +56,12 @@ const remove = async (req, res) => {
     res.json(tableDeleted);
 };
 
-module.exports = { getAll, create, edit, remove, getTableById, getTableByCapacity };
+module.exports = {
+    getAll,
+    getTableById,
+    getTableByCapacity,
+    getAvailableTables,
+    create,
+    edit,
+    remove,
+};
