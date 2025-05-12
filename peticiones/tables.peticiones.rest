@@ -11,6 +11,14 @@ GET {{host}}/api/tables/6
 Content-Type: application/json
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NjI1OTE5fQ.HhVf9PCmYAlj6tgkb6Pz6yKqa7qln_WH3G2BECVbv2Q
 
+GET {{host}}/api/tables/capacity/2
+
+###
+
+GET {{host}}/api/tables/availables/2/2025-05-11/13:30
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NjI1OTE5fQ.HhVf9PCmYAlj6tgkb6Pz6yKqa7qln_WH3G2BECVbv2Q
+
 
 ###
 
@@ -36,6 +44,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWlu
 
 ###
 
-DELETE {{host}}/api/tables/12
+DELETE {{host}}/api/tables/8
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
