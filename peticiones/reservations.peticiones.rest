@@ -20,6 +20,7 @@ GET {{host}}/api/reservations/date/2023-10-10/17:00
 
 POST {{host}}/api/reservations
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ2NTU4MjcyfQ.7QeaD0-OXE5p079Pw7XRUeT748UeHLda00pleG0o7yA
 
 {
     "user_id": 5,
