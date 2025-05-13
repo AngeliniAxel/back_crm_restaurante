@@ -51,7 +51,13 @@ const edit = async (req, res) => {
 const remove = async (req, res) => {
     const { tableId } = req.params;
     const tableDeleted = await Table.selectById(tableId);
-    const result = await Table.deleteById(tableId);
+    let result;
+
+    try {
+        result = await Table.deleteById(tableId);
+    } catch (error) {
+        res.status(400).json({ message: 'No se puede eliminar la mesa porque tiene reservas' });
+    }
 
     res.json(tableDeleted);
 };
