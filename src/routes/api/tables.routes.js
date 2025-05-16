@@ -14,7 +14,7 @@ const { checkAdmin, checkToken } = require('../../middlewares/users.middleware')
 
 router.get('/', checkToken, checkAdmin, getAll);
 router.get('/:tableId', checkToken, checkAdmin, getTableById);
-router.get('/availables/:capacity/:date/:time', checkToken, getAvailableTables);
+router.get('/availables/:capacity/:date', checkToken, getAvailableTables);
 router.get('/capacity/:capacity', getTableByCapacity);
 
 router.post('/', checkToken, checkAdmin, create);

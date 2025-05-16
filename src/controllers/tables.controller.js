@@ -6,9 +6,16 @@ const getAll = async (req, res) => {
 };
 
 const getAvailableTables = async (req, res) => {
-    const { capacity, date, time } = req.params;
-    const result = await Table.selectAvailableTables(capacity, date, time);
-    res.json(result);
+    const { capacity, date } = req.params;
+
+    const [at12, at14, at20, at22] = await Promise.all([
+        Table.selectAvailableTables(capacity, date, '12:00'),
+        Table.selectAvailableTables(capacity, date, '14:00'),
+        Table.selectAvailableTables(capacity, date, '20:00'),
+        Table.selectAvailableTables(capacity, date, '22:00'),
+    ]);
+
+    res.json({ at12, at14, at20, at22 });
 };
 
 const getTableById = async (req, res) => {
