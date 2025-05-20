@@ -1,99 +1,45 @@
-# Express Base Application for API Creation
+# 🍽️ CRM Restaurante - Backend
 
-This is a basic Express application template designed to help you create APIs
-quickly. It includes essential configurations and setup for starting an Express
-server.
+Sistema de gestión para restaurantes enfocado en reservas, menús diarios y experiencia del cliente.
 
-## Features
+## 🎯 Objetivo
 
-- Basic Express server setup
-- CORS enabled
-- Environment configuration with `.env` support
+Proveer al restaurante de una plataforma robusta que gestione tanto los menús como las reservas y la interacción con los clientes.
 
-## Getting Started
+## 🧑‍💻 Roles
 
-### Prerequisites
+- **Cliente**:
+  - Registro e inicio de sesión.
+  - Consulta del menú diario.
+  - Reserva de mesas.
+  - Publicación de reseñas.
 
-Ensure you have Node.js and npm installed on your machine. You can download them
-from [Node.js official website](https://nodejs.org/).
+- **Administrador**:
+  - Usuario creado por defecto.
+  - Gestión de menús diarios.
+  - Configuración del número y tamaño de las mesas.
+  - Visualización de reservas y reseñas.
 
-### Installation
+## ✅ Must Have (Backend)
 
-1. **Clone the repository:**
+- [x] API para registro y autenticación de clientes.
+- [x] Usuario administrador creado por defecto.
+- [x] Gestión de menús diarios:
+  - [x] Crear, editar y eliminar menús.
+  - [x] Asignar menú a un día concreto.
+- [x] Gestión de reservas:
+  - [x] Establecer mesas disponibles y su tamaño.
+  - [x] Crear y cancelar reservas (cliente autenticado).
+  - [x] Verificación de disponibilidad antes de permitir reservas.
+- [x] Sistema de reseñas post-reserva visibles para el administrador.
 
-```bash
-git clone https://github.com/mariogiron/express-init-template.git project-name
-```
+## 💡 Should Have (Backend)
 
-2. **Navigate to the project directory:**
+- [X] Envío de email al cliente al confirmar la reserva.
 
-```bash
-cd project-name
-```
+## 🛠️ Tecnologías sugeridas
 
-3. **Install the dependencies:**
-
-```bash
-npm install
-```
-
-### Environment Configuration
-
-Create a `.env` file in the root of the project and configure your environment
-variables. An example `.env` file might look like this:
-
-```
-PORT=3000
-```
-
-### Running the Application
-
-#### Start the server
-
-Start the server by running:
-
-```bash
-npm start
-```
-
-The server will start and listen on the port defined in your `.env` file, or
-default to port 3000 if not specified.
-
-#### Development mode
-
-To start the server in development mode with `nodemon`, which will automatically
-restart the server on file changes, run:
-
-```bash
-npm run dev
-```
-
-### Available Scripts
-
-- **start**: Runs `node index.js` to start the server.
-- **dev**: Runs `nodemon index.js` to start the server in development mode with
-  automatic restarts on file changes.
-- **generate**: Runs `express generate` to create any resource inside your
-  project. The actions available are "model", "controller", "route", "all"
-- **config**: Runs `express config` to config the date of your project.
-
-### Project Structure
-
-    ├── src
-    │   ├── app.js          # Express app configuration
-    │   ├── models          # Data models
-    │   ├── controllers     # Route controllers
-    │   ├── routes          # Application routes
-    ├── .env                # Environment variables
-    ├── index.js            # Server creation and configuration
-    ├── package.json        # Project metadata and dependencies
-
-### Contributing
-
-Feel free to submit issues and pull requests to improve the project. For major
-changes, please open an issue first to discuss what you would like to change.
-
-### License
-
-This project is licensed under the ISC License - see the LICENSE file for
-details.
+- Node.js / Express
+- MySql
+- JWT / OAuth para autenticación
+- Nodemailer (para el envío de correos)
